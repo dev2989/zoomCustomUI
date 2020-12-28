@@ -8,22 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		A00922F525948A300077776A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00922F425948A300077776A /* AppDelegate.swift */; };
-		A00922F725948A300077776A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00922F625948A300077776A /* SceneDelegate.swift */; };
 		A00922F925948A300077776A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00922F825948A300077776A /* ViewController.swift */; };
 		A00922FC25948A300077776A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00922FA25948A300077776A /* Main.storyboard */; };
 		A00922FE25948A310077776A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00922FD25948A310077776A /* Assets.xcassets */; };
 		A009230125948A310077776A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00922FF25948A310077776A /* LaunchScreen.storyboard */; };
+		A009230D25948D3B0077776A /* ZjoinmeetingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009230C25948D3B0077776A /* ZjoinmeetingVC.swift */; };
+		A009231025948D490077776A /* ZstartmeetingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009230F25948D490077776A /* ZstartmeetingVC.swift */; };
+		A0092315259491600077776A /* ZmeetingroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0092314259491600077776A /* ZmeetingroomVC.swift */; };
+		A009231A2594952E0077776A /* GenralSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00923192594952E0077776A /* GenralSetting.swift */; };
+		A009233325949B9E0077776A /* MobileRTCResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A009233025949B9D0077776A /* MobileRTCResources.bundle */; };
+		A009233525949BAD0077776A /* MobileRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A009233125949B9D0077776A /* MobileRTC.framework */; };
+		A009233625949BAD0077776A /* MobileRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A009233125949B9D0077776A /* MobileRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A009233C2594A01C0077776A /* ZCustomUIjoinmeetingRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009233B2594A01C0077776A /* ZCustomUIjoinmeetingRoomVC.swift */; };
+		A009233E2594A0340077776A /* ZDefaultUIjoinmeetingRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009233D2594A0340077776A /* ZDefaultUIjoinmeetingRoomVC.swift */; };
+		A00923412594A1880077776A /* toastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00923402594A1880077776A /* toastVC.swift */; };
+		A00923432594BD6A0077776A /* ZcustomUIClientSDKVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00923422594BD6A0077776A /* ZcustomUIClientSDKVC.swift */; };
+		A00923512594C2590077776A /* ZDefaultStartMeetingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00923502594C2590077776A /* ZDefaultStartMeetingVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A009232D25949AEA0077776A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A009233625949BAD0077776A /* MobileRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A00922F125948A300077776A /* zoomcustomUidemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoomcustomUidemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00922F425948A300077776A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A00922F625948A300077776A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A00922F825948A300077776A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A00922FB25948A300077776A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A00922FD25948A310077776A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A009230025948A310077776A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A009230225948A310077776A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A009230C25948D3B0077776A /* ZjoinmeetingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZjoinmeetingVC.swift; sourceTree = "<group>"; };
+		A009230F25948D490077776A /* ZstartmeetingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZstartmeetingVC.swift; sourceTree = "<group>"; };
+		A0092314259491600077776A /* ZmeetingroomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmeetingroomVC.swift; sourceTree = "<group>"; };
+		A00923192594952E0077776A /* GenralSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenralSetting.swift; sourceTree = "<group>"; };
+		A009232F25949B9D0077776A /* MobileRTCScreenShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileRTCScreenShare.framework; sourceTree = "<group>"; };
+		A009233025949B9D0077776A /* MobileRTCResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobileRTCResources.bundle; sourceTree = "<group>"; };
+		A009233125949B9D0077776A /* MobileRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileRTC.framework; sourceTree = "<group>"; };
+		A009233B2594A01C0077776A /* ZCustomUIjoinmeetingRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCustomUIjoinmeetingRoomVC.swift; sourceTree = "<group>"; };
+		A009233D2594A0340077776A /* ZDefaultUIjoinmeetingRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDefaultUIjoinmeetingRoomVC.swift; sourceTree = "<group>"; };
+		A00923402594A1880077776A /* toastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toastVC.swift; sourceTree = "<group>"; };
+		A00923422594BD6A0077776A /* ZcustomUIClientSDKVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZcustomUIClientSDKVC.swift; sourceTree = "<group>"; };
+		A00923502594C2590077776A /* ZDefaultStartMeetingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDefaultStartMeetingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A009233525949BAD0077776A /* MobileRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +93,42 @@
 		A00922F325948A300077776A /* zoomcustomUidemo */ = {
 			isa = PBXGroup;
 			children = (
+				A009233F2594A1760077776A /* HelperClass */,
+				A009232E25949B9D0077776A /* zoomSdk */,
 				A00922F425948A300077776A /* AppDelegate.swift */,
-				A00922F625948A300077776A /* SceneDelegate.swift */,
+				A00923192594952E0077776A /* GenralSetting.swift */,
 				A00922F825948A300077776A /* ViewController.swift */,
+				A009230C25948D3B0077776A /* ZjoinmeetingVC.swift */,
+				A009230F25948D490077776A /* ZstartmeetingVC.swift */,
+				A0092314259491600077776A /* ZmeetingroomVC.swift */,
+				A009233B2594A01C0077776A /* ZCustomUIjoinmeetingRoomVC.swift */,
+				A009233D2594A0340077776A /* ZDefaultUIjoinmeetingRoomVC.swift */,
+				A00923502594C2590077776A /* ZDefaultStartMeetingVC.swift */,
+				A00923422594BD6A0077776A /* ZcustomUIClientSDKVC.swift */,
 				A00922FA25948A300077776A /* Main.storyboard */,
 				A00922FD25948A310077776A /* Assets.xcassets */,
 				A00922FF25948A310077776A /* LaunchScreen.storyboard */,
 				A009230225948A310077776A /* Info.plist */,
 			);
 			path = zoomcustomUidemo;
+			sourceTree = "<group>";
+		};
+		A009232E25949B9D0077776A /* zoomSdk */ = {
+			isa = PBXGroup;
+			children = (
+				A009232F25949B9D0077776A /* MobileRTCScreenShare.framework */,
+				A009233025949B9D0077776A /* MobileRTCResources.bundle */,
+				A009233125949B9D0077776A /* MobileRTC.framework */,
+			);
+			path = zoomSdk;
+			sourceTree = "<group>";
+		};
+		A009233F2594A1760077776A /* HelperClass */ = {
+			isa = PBXGroup;
+			children = (
+				A00923402594A1880077776A /* toastVC.swift */,
+			);
+			path = HelperClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +141,7 @@
 				A00922ED25948A300077776A /* Sources */,
 				A00922EE25948A300077776A /* Frameworks */,
 				A00922EF25948A300077776A /* Resources */,
+				A009232D25949AEA0077776A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A009230125948A310077776A /* LaunchScreen.storyboard in Resources */,
+				A009233325949B9E0077776A /* MobileRTCResources.bundle in Resources */,
 				A00922FE25948A310077776A /* Assets.xcassets in Resources */,
 				A00922FC25948A300077776A /* Main.storyboard in Resources */,
 			);
@@ -137,9 +203,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A009233E2594A0340077776A /* ZDefaultUIjoinmeetingRoomVC.swift in Sources */,
+				A0092315259491600077776A /* ZmeetingroomVC.swift in Sources */,
+				A00923432594BD6A0077776A /* ZcustomUIClientSDKVC.swift in Sources */,
+				A00923412594A1880077776A /* toastVC.swift in Sources */,
 				A00922F925948A300077776A /* ViewController.swift in Sources */,
+				A009233C2594A01C0077776A /* ZCustomUIjoinmeetingRoomVC.swift in Sources */,
+				A009231A2594952E0077776A /* GenralSetting.swift in Sources */,
+				A009231025948D490077776A /* ZstartmeetingVC.swift in Sources */,
+				A00923512594C2590077776A /* ZDefaultStartMeetingVC.swift in Sources */,
+				A009230D25948D3B0077776A /* ZjoinmeetingVC.swift in Sources */,
 				A00922F525948A300077776A /* AppDelegate.swift in Sources */,
-				A00922F725948A300077776A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +360,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 94578VNHQR;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/zoomcustomUidemo/zoomSdk",
+				);
 				INFOPLIST_FILE = zoomcustomUidemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techuzinfoweb.zoomcustomUidemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = wildcareMahavir;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,14 +387,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 94578VNHQR;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/zoomcustomUidemo/zoomSdk",
+				);
 				INFOPLIST_FILE = zoomcustomUidemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techuzinfoweb.zoomcustomUidemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = wildcareMahavir;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

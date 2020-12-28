@@ -6,31 +6,79 @@
 //
 
 import UIKit
+import MobileRTC
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupSDK(sdkKey: GenralSetting.Shared.sdkKey, sdkSecret: GenralSetting.Shared.sdkSecret)
         return true
     }
+    func setupSDK(sdkKey: String, sdkSecret: String) {
+            let context = MobileRTCSDKInitContext()
+            context.domain = GenralSetting.Shared.domain
+            context.enableLog = true
 
-    // MARK: UISceneSession Lifecycle
+            let sdkInitializedSuccessfully = MobileRTC.shared().initialize(context)
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+            if sdkInitializedSuccessfully == true, let authorizationService = MobileRTC.shared().getAuthService() {
+                authorizationService.clientKey = sdkKey
+                authorizationService.clientSecret = sdkSecret
+                authorizationService.delegate = self
+                authorizationService.sdkAuth()
+            }
+        
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+            // Obtain the MobileRTCAuthService from the Zoom SDK, this service can log in a Zoom user, log out a Zoom user, authorize the Zoom SDK etc.
+            if let authorizationService = MobileRTC.shared().getAuthService() {
+                // Call logoutRTC() to log the user out.
+                authorizationService.logoutRTC()
+            }
     }
-
 
 }
 
+extension AppDelegate: MobileRTCAuthDelegate {
+
+    // Result of calling sdkAuth(). MobileRTCAuthError_Success represents a successful authorization.
+    func onMobileRTCAuthReturn(_ returnValue: MobileRTCAuthError) {
+        switch returnValue {
+        case MobileRTCAuthError.success:
+            print("SDK successfully initialized.")
+        case MobileRTCAuthError.keyOrSecretEmpty:
+            assertionFailure("SDK Key/Secret was not provided. Replace sdkKey and sdkSecret at the top of this file with your SDK Key/Secret.")
+        case MobileRTCAuthError.keyOrSecretWrong, MobileRTCAuthError.unknown:
+            assertionFailure("SDK Key/Secret is not valid.")
+        default:
+            assertionFailure("SDK Authorization failed with MobileRTCAuthError: \(returnValue).")
+        }
+    }
+    
+    // Result of calling logIn(). 0 represents a successful login attempt.
+       func onMobileRTCLoginReturn(_ returnValue: Int) {
+           switch returnValue {
+           case 0:
+               print("Successfully logged in")
+
+               // This alerts the ViewController that login was successful.            NotificationCenter.default.post(name: Notification.Name("userLoggedIn"), object: nil)
+           case 1002:
+               print("Password incorrect")
+           default:
+               print("Could not log in. Error code: \(returnValue)")
+           }
+       }
+
+       // Result of calling logoutRTC(). 0 represents a successful log out attempt.
+       func onMobileRTCLogoutReturn(_ returnValue: Int) {
+           switch returnValue {
+           case 0:
+               print("Successfully logged out")
+           default:
+               print("Could not log out. Error code: \(returnValue)")
+           }
+       }
+}
