@@ -63,6 +63,8 @@ extension AppDelegate: MobileRTCAuthDelegate {
            switch returnValue {
            case 0:
                print("Successfully logged in")
+                let nc = NotificationCenter.default
+                nc.post(name: Notification.Name("userLoggedIn"), object: nil)
 
                // This alerts the ViewController that login was successful.            NotificationCenter.default.post(name: Notification.Name("userLoggedIn"), object: nil)
            case 1002:
