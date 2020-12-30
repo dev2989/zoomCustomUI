@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GenralSetting.Shared.sdkKey = ""
+        GenralSetting.Shared.sdkSecret = ""
         setupSDK(sdkKey: GenralSetting.Shared.sdkKey, sdkSecret: GenralSetting.Shared.sdkSecret)
         return true
     }

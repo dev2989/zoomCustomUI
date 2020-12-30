@@ -10,8 +10,8 @@ import Foundation
 class GenralSetting: NSObject {
     static let Shared = GenralSetting()
     
-    let sdkKey = "w7gOWdhujkfqwRLSEGphiJ3sesWDL7veMEZK"
-    let sdkSecret = "kW9giRBnvBgu5l8F2Rhi65kKL4CZnoJrTZgh"
+    var sdkKey = ""
+    var sdkSecret = ""
     let domain = "zoom.us"
 
     var jointmeetingType: Bool {
