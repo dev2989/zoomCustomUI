@@ -17,9 +17,9 @@ class ZstartmeetingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtMeetingnumber.text = "81541140153"
-        txthostEmail.text = "motimimeran@gmail.com"
-        txtHostpassword.text = "Ab123456"
+        txtMeetingnumber.text = ""
+        txthostEmail.text = ""
+        txtHostpassword.text = ""
 
         if(GenralSetting.Shared.startmeetingType){
             segment.selectedSegmentIndex = 1

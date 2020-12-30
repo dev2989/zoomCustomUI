@@ -17,9 +17,9 @@ class ZjoinmeetingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtMeetingnumber.text = "81541140153"
-        txtWebinaremail.text = "mahavir@techuz.com"
-        txtWebinarscreenname.text = "mac"
+        txtMeetingnumber.text = ""
+        txtWebinaremail.text = ""
+        txtWebinarscreenname.text = ""
         if(GenralSetting.Shared.jointmeetingType){
             segment.selectedSegmentIndex = 1
         }else{
